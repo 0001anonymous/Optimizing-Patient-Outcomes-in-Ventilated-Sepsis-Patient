@@ -1,13 +1,8 @@
 # Optimizing Patient Outcomes in Ventilated Sepsis Patients: An Interactive Machine Learning-Based Model
-## [Paper overleaf link](https://www.overleaf.com/project/6586aa9c35f15cfc0f7bb70e)
-## [Slides link](https://www.canva.com/design/DAF3yyr8etc/_CKBIdHigxC4TrWdRKFPtw/edit)
-## [Discussion record hackMD link](https://hackmd.io/@TimothyChang/BJ89oWTWp/https%3A%2F%2Fhackmd.io%2F%40TimothyChang%2FBJ89oWTWp%2Fhttps%253A%252F%252Fhackmd.io%252Fc%252FBJ89oWTWp%252Fedit%253Fedit)
+
+
 ## Abstract
-In this study, we explore the impact of ventilator settings on the survival of intensive-care patients with sepsis. Using the MIMIC-IV database, our investigation focuses on the perception of doctors' decision-making processes, observing patient responses, and developing predictive models for successful weaning.
-
-The three models: Doctor, Patient, and Events, provide a comprehensive analysis of these interactions. The Doctor Model predicts physicians' choices, the Patient Model forecasts patient reactions, and the Events Model predicts the outcomes of weaning procedures.
-
-Our findings unraveling these dynamics holds the potential to optimize ventilator strategies, thereby enhancing patient care and overall survival.
+This study focuses on optimizing ventilator parameter settings for patients using mechanical ventilation and predicting the success or failure of weaning. While previous research has primarily concentrated on predicting weaning outcomes or identifying optimal weaning timing, there has been a lack of effective recommendations for clinicians on adjusting ventilator parameters. In response, we propose a novel approach that leverages the interactive application of three distinct models to provide clinicians with valuable medical assistance suggestions. These models are the doctor model, patient model, and event model. The doctor model aims to learn from successful weaning cases, providing insights into how clinicians should adjust ventilator settings for favorable outcomes. The patient model is responsible for predicting corresponding changes in vital signs based on the ventilator settings given by the clinician. The event model predicts the likelihood of successful weaning for the current patient, while successful weaning is defined by no reintubation or death in 48 hours after weaning. To validate our approach, we utilized the MIMIC dataset, specifically focusing on a cohort of patients with sepsis. Our event model achieved an AUROC of 0.82 on the test data and an accuracy of 80.66\%. Additionally, when using the doctor model to re-treat all patients in test data 12 hour before weaning, based on the prediction results, the fail rate decreased from the initial 36.5\% to 23\%. Our findings present a promising method for enhancing clinical decision-making regarding ventilator management in critically ill patients.
 
 ## Code
 - BigQuerySQL.md: SQL for cohort selection, feature selection, and ground truth selection.
