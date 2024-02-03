@@ -1,5 +1,5 @@
 ---
-title: "數位醫療"
+title: "POOVSP"
 output:
   html_document: default
   pdf_document: default
@@ -11,7 +11,7 @@ library(readr)
 library(tableone)
 
 # 读取数据
-data <- read_csv("D:/大四上/數位醫療資料科學/project/jan_v1/data/data_by_table/pre_24h_data_v6.csv")
+data <- read_csv("./pre_24h_data_v6.csv")
 
 # 查找RSBI列中的Inf和NaN
 inf_indices <- which(is.infinite(data$RSBI))
